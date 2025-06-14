@@ -31,6 +31,7 @@
                    @endif
                </a>
            </div>
+
            <div class="col-md-6 mt-4">
                <h3 class="mt-4">{{$product->name}}</h3>
            </div>
@@ -44,6 +45,16 @@
        </div>
 
        <hr>
+
+       <div class="offset-8 col-4">
+          <div class="row">
+             <div class="col-6">
+                <h2>送料</h2>
+                <div class="col-6">
+                    <h2>￥{{ $carriage_cost }}</h2>
+                </div>
+           </div>
+        </div>
 
        <div class="offset-8 col-4">
            <div class="row">
