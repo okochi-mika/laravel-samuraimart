@@ -14,8 +14,4 @@ class MajorCategory extends Model
         return $this->hasMany(Category::class);
     }
 
-    public function major_category()
-    {
-        return $this->belongsTo(MajorCategory::class);
-    }
 }
