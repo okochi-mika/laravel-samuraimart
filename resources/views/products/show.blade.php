@@ -74,6 +74,11 @@
 
        <div class="offset-1 col-11">
            <hr class="w-100">
+              <div class="offset-1 col-11 mb-3">
+                <h3>平均評価</h3>
+                <div class="samuraimart-star-rating" data-rate="{{ round($product->reviews->avg('score') * 2) / 2 }}"></div>
+                <p>{{ round($product->reviews->avg('score'), 1) }} / 5</p>
+              </div>
            <h3 class="float-left">カスタマーレビュー</h3>
        </div>
 
@@ -97,10 +102,10 @@
                         <h4>評価</h4>
                         <select name="score" class="form-control m-2 review-score-color">
                             <option value="5" class="review-score-color">★★★★★</option>
-                            <option value="5" class="review-score-color">★★★★</option>
-                            <option value="5" class="review-score-color">★★★</option>
-                            <option value="5" class="review-score-color">★★</option>
-                            <option value="5" class="review-score-color">★</option>
+                            <option value="4" class="review-score-color">★★★★</option>
+                            <option value="3" class="review-score-color">★★★</option>
+                            <option value="2" class="review-score-color">★★</option>
+                            <option value="1" class="review-score-color">★</option>
                        </select>
                         <h4>タイトル</h4>
                         @error('title')

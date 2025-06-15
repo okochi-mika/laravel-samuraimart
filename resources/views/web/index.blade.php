@@ -22,6 +22,10 @@
                 <div class="col-12">
                     <p class="samuraimart-product-label mt-2">
                         {{ $recommend_product->name }}<br>
+                        {{-- ★ 星評価の表示 --}}
+                        <div class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}"></div>
+
+                        <p>{{ round($recommend_product->reviews->avg('score'), 1) }} / 5</p>
                         <label>￥{{ $recommend_product->price }}</label>
                     </p>
                 </div>
