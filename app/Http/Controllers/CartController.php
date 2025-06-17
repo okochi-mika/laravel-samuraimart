@@ -19,6 +19,7 @@ class CartController extends Controller
         $cart = Cart::instance(Auth::user()->id)->content();
         $has_carriage_cost = false;
         $total = 0;
+        $carriage_cost =0;
 
         foreach ($cart as $c) {
             $total += $c->qty * $c->price;
@@ -57,7 +58,7 @@ class CartController extends Controller
                 ]
             ]
         );
-
-        return to_route('products.show', $request->get('id'));
+        
+        return to_route('carts.index');
     }
 }

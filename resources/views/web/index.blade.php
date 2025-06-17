@@ -36,7 +36,16 @@
                                         <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a>
                                         <br>
                                         <label>￥{{ number_format($recommend_product->price) }}</label>
-                                    </p>
+                                        <br>
+                                        {{-- ★マークで評価を表示 --}}
+                                        @for ($i = 0; $i < 5; $i++)
+                                            @if ($i < $recommend_product->average_score)
+                                               <span style="color: gold;">★</span>
+                                            @else
+                                               <span style="color: lightgray;">★</span>
+                                            @endif
+                                        @endfor
+                                    <p>
                                 </div>
                             </div>
                         </div>
