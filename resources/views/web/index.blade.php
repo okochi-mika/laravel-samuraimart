@@ -45,6 +45,7 @@
                                                <span style="color: lightgray;">★</span>
                                             @endif
                                         @endfor
+                                        {{ $recommend_product->average_score }}<br>
                                     <p>
                                 </div>
                             </div>
